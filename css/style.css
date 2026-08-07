@@ -1737,309 +1737,551 @@ transform:translateY(0);
 color:var(--primary)!important;
 
 }
+/*==================================================
+                RESPONSIVE DESIGN
+===================================================*/
+
+/* -------------------- Large Tablet -------------------- */
+
+@media screen and (max-width:1024px){
+
+    nav{
+        padding:0 30px;
+        height:90px;
+    }
+
+    .logo img{
+        width:190px;
+    }
+
+    .nav-links{
+        gap:25px;
+    }
+
+    .nav-links a{
+        font-size:16px;
+    }
+
+    .btn-nav{
+        padding:12px 24px;
+        font-size:15px;
+    }
+
+    .hero{
+        padding-top:140px;
+    }
+
+    .hero-logo{
+        width:180px;
+    }
+
+    .hero h1{
+        font-size:54px;
+    }
+
+    .hero p{
+        font-size:18px;
+    }
+
+    .featured-grid,
+    .services-grid,
+    .why-grid,
+    .category-grid,
+    .pricing-grid,
+    .testimonial-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .stats-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .about .container,
+    .contact-container{
+        grid-template-columns:1fr;
+        text-align:center;
+        gap:50px;
+    }
+
+}
+
+/* -------------------- Mobile -------------------- */
+
+@media screen and (max-width:768px){
+
+    section{
+        padding:70px 25px;
+    }
+
+    nav{
+
+        height:75px;
+
+        padding:0 18px;
+
+        display:flex;
+
+        justify-content:space-between;
+
+        align-items:center;
+
+    }
+
+    .logo img{
+
+        width:155px;
+
+    }
+
+    .nav-links{
+
+        display:none;
+
+    }
+
+    .btn-nav{
+
+        display:none;
+
+    }
+
+    .menu-btn{
+
+        display:block;
+
+        font-size:28px;
+
+        color:#D4AF37;
+
+        cursor:pointer;
+
+    }
+
+    .hero{
+
+        padding-top:90px;
+
+        min-height:100vh;
+
+    }
+
+    .hero-logo{
+
+        width:130px;
+
+        margin-bottom:20px;
+
+    }
+
+    .hero h1{
+
+        font-size:34px;
+
+        line-height:1.25;
+
+    }
+
+    .hero p{
+
+        font-size:15px;
+
+        line-height:1.7;
+
+        letter-spacing:1px;
+
+        margin-top:15px;
+
+    }
+
+    .hero-buttons{
+
+        flex-direction:column;
+
+        gap:15px;
+
+        margin-top:30px;
+
+    }
+
+    .hero-buttons a{
+
+        width:220px;
+
+        padding:14px;
+
+        font-size:15px;
+
+    }
+
+    .section-title{
+
+        margin-bottom:45px;
+
+    }
+
+    .section-title h2{
+
+        font-size:32px;
+
+    }
+
+    .section-title p{
+
+        font-size:15px;
+
+    }
+
+    .featured-grid,
+    .services-grid,
+    .why-grid,
+    .category-grid,
+    .pricing-grid,
+    .testimonial-grid,
+    .stats-grid{
+
+        grid-template-columns:1fr;
+
+        gap:25px;
+
+    }
+
+    .art-card img{
+
+        height:260px;
+
+    }
+
+    .art-info{
+
+        left:20px;
+
+        bottom:20px;
+
+    }
+
+    .art-info h3{
+
+        font-size:22px;
+
+    }
+
+    .art-info p{
+
+        font-size:14px;
+
+    }
+
+    .about-left img{
+
+        width:180px;
+
+    }
+
+    .about-right h2{
+
+        font-size:30px;
+
+    }
+
+    .about-right p{
+
+        font-size:15px;
+
+    }
+
+    .service-card,
+    .category-card,
+    .why-card,
+    .price-card,
+    .testimonial-card,
+    .stat-box{
+
+        padding:30px 20px;
+
+    }
+
+    .price-card h1{
+
+        font-size:42px;
+
+    }
+
+    .stat-box h2{
+
+        font-size:38px;
+
+    }
+
+    .contact-card{
+
+        flex-direction:column;
+
+        text-align:center;
+
+    }
+
+    .contact-form input,
+    .contact-form textarea{
+
+        font-size:15px;
+
+    }
+
+    .footer{
+
+        padding:60px 20px 30px;
+
+    }
+
+    .footer-logo img{
+
+        width:180px;
+
+    }
+
+    .footer-menu{
+
+        flex-direction:column;
+
+        gap:15px;
+
+    }
+
+    .footer-social{
+
+        gap:12px;
+
+    }
+
+    .footer-social a{
+
+        width:45px;
+
+        height:45px;
+
+        font-size:18px;
+
+    }
+
+}
+
+/* -------------------- Small Mobile -------------------- */
+
+@media screen and (max-width:480px){
+
+    section{
+
+        padding:60px 18px;
+
+    }
+
+    .logo img{
+
+        width:140px;
+
+    }
+
+    .hero{
+
+        padding-top:80px;
+
+    }
+
+    .hero-logo{
+
+        width:110px;
+
+    }
+
+    .hero h1{
+
+        font-size:28px;
+
+    }
+
+    .hero p{
+
+        font-size:13px;
+
+    }
+
+    .hero-buttons a{
+
+        width:100%;
+
+        max-width:220px;
+
+        font-size:14px;
+
+    }
+
+    .section-title h2{
+
+        font-size:26px;
+
+    }
+
+    .about-right h2{
+
+        font-size:26px;
+
+    }
+
+    .footer-logo img{
+
+        width:150px;
+
+    }
+
+    .footer blockquote{
+
+        font-size:16px;
+
+    }
+
+}
 /*======================================
-        RESPONSIVE
-======================================*/
+            MOBILE MENU
+=======================================*/
 
-@media(max-width:1024px){
+.menu-btn{
 
-nav{
+    display:none;
 
-padding:15px 30px;
+    font-size:30px;
 
-}
+    color:#D4AF37;
 
-.logo img{
-
-width:180px;
+    cursor:pointer;
 
 }
 
-.nav-links{
+.mobile-menu{
 
-gap:25px;
+    position:fixed;
 
-}
+    top:0;
 
-.nav-links a{
+    right:-100%;
 
-font-size:17px;
+    width:100%;
 
-}
+    height:100vh;
 
-.hero{
+    background:#050505;
 
-padding-top:140px;
+    display:flex;
 
-}
+    flex-direction:column;
 
-.hero-logo{
+    justify-content:center;
 
-width:220px;
+    align-items:center;
 
-}
+    gap:35px;
 
-.hero h1{
+    transition:.5s ease;
 
-font-size:55px;
-
-}
-
-.hero p{
-
-font-size:18px;
+    z-index:99999;
 
 }
 
-.featured-grid,
-.services-grid,
-.why-grid,
-.category-grid,
-.pricing-grid,
-.testimonial-grid{
+.mobile-menu.active{
 
-grid-template-columns:repeat(2,1fr);
+    right:0;
 
 }
 
-.about .container,
-.contact-container{
+.mobile-menu a{
 
-grid-template-columns:1fr;
+    color:white;
 
-text-align:center;
+    font-size:28px;
 
-}
+    font-family:'Cinzel', serif;
 
-.about-left{
-
-margin-bottom:40px;
+    transition:.3s;
 
 }
 
+.mobile-menu a:hover{
+
+    color:#D4AF37;
+
+    transform:translateX(10px);
+
 }
+
+.mobile-btn{
+
+    margin-top:30px;
+
+    border:2px solid #D4AF37;
+
+    padding:15px 35px;
+
+    border-radius:50px;
+
+}
+
+.close-menu{
+
+    position:absolute;
+
+    top:30px;
+
+    right:35px;
+
+    color:#D4AF37;
+
+    font-size:34px;
+
+    cursor:pointer;
+
+}
+
 @media(max-width:768px){
 
-nav{
+.menu-btn{
 
-flex-direction:column;
-
-height:auto;
-
-padding:20px;
+display:block;
 
 }
+.hero-buttons a{
 
-.logo{
-
-margin-bottom:20px;
-
-}
-
-.logo img{
-
-width:220px;
-
-}
-
-.nav-links{
-
-flex-wrap:wrap;
-
-justify-content:center;
-
-gap:18px;
-
-margin:20px 0;
+    width:200px;
+    padding:12px 20px;
+    font-size:14px;
 
 }
 
 .btn-nav{
 
-padding:14px 25px;
+    font-size:14px;
+    padding:10px 20px;
 
-font-size:15px;
+}
+.mobile-menu a{
+
+    font-size:22px;
 
 }
 
-.hero{
+.mobile-btn{
 
-padding-top:260px;
+    font-size:15px;
 
-padding-left:20px;
+}.hero-logo{
 
-padding-right:20px;
-
-}
-
-.hero-logo{
-
-width:170px;
+    width:100px;
 
 }
 
-.hero h1{
+.nav-links,
 
-font-size:40px;
+.btn-nav{
 
-line-height:1.3;
-
-}
-
-.hero p{
-
-font-size:16px;
-
-line-height:1.8;
-
-}
-
-.hero-buttons{
-
-flex-direction:column;
-
-align-items:center;
-
-}
-
-.hero-buttons a{
-
-width:240px;
-
-text-align:center;
-
-}
-
-.section-title h2{
-
-font-size:36px;
-
-}
-
-.featured-grid,
-.services-grid,
-.why-grid,
-.category-grid,
-.pricing-grid,
-.testimonial-grid,
-.stats-grid{
-
-grid-template-columns:1fr;
-
-}
-
-.about-right h2{
-
-font-size:34px;
-
-}
-
-.footer-menu{
-
-flex-direction:column;
-
-gap:18px;
-
-}
-
-.footer-logo img{
-
-width:220px;
-
-}
-
-.footer-social{
-
-gap:15px;
-
-}
-
-.contact-card{
-
-flex-direction:column;
-
-text-align:center;
-
-}
-
-}
-@media(max-width:480px){
-
-.logo img{
-
-width:180px;
-
-}
-
-.hero{
-
-padding-top:220px;
-
-}
-
-.hero-logo{
-
-width:140px;
-
-}
-
-.hero h1{
-
-font-size:32px;
-
-}
-
-.hero p{
-
-font-size:14px;
-
-letter-spacing:1px;
-
-}
-
-.hero-buttons a{
-
-width:100%;
-
-font-size:15px;
-
-padding:15px;
-
-}
-
-section{
-
-padding:80px 20px;
-
-}
-
-.section-title h2{
-
-font-size:30px;
-
-}
-
-.price-card h1{
-
-font-size:42px;
-
-}
-
-.stat-box h2{
-
-font-size:40px;
-
-}
-
-.footer-logo img{
-
-width:180px;
-
-}
-
-.footer blockquote{
-
-font-size:18px;
+display:none;
 
 }
 
