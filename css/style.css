@@ -392,20 +392,19 @@ color:black;
 box-shadow:0 0 20px rgba(212,175,55,.35);
 
 }
-
-/*=========================
-        HERO
-==========================*/
+/*======================================
+            HERO SECTION
+=======================================*/
 
 .hero{
 
     min-height:100vh;
 
-    padding-top:180px;   /* Push hero below navbar */
-
     display:flex;
     justify-content:center;
     align-items:center;
+
+    flex-direction:column;
 
     text-align:center;
 
@@ -413,158 +412,258 @@ box-shadow:0 0 20px rgba(212,175,55,.35);
 
     overflow:hidden;
 
-    background:
-    radial-gradient(circle at center,
-    #1a1a1a,
-    #080808,
-    #000);
+    padding:150px 20px 60px;
+
+    background:radial-gradient(
+        circle at center,
+        #1b1b1b,
+        #090909,
+        #000
+    );
 
 }
 
-/*=========================
-        GOLD GLOW
-==========================*/
+/*======================================
+            GOLD GLOW
+=======================================*/
 
 .hero::before{
 
-content:"";
+    content:"";
 
-position:absolute;
+    position:absolute;
 
-width:700px;
+    width:700px;
+    height:700px;
 
-height:700px;
+    background:radial-gradient(
+        rgba(212,175,55,.16),
+        transparent 70%
+    );
 
-background:radial-gradient(
+    filter:blur(90px);
 
-rgba(212,175,55,.16),
-transparent 70%
-
-);
-
-filter:blur(90px);
+    z-index:1;
 
 }
 
-/*=========================
-        HERO CONTENT
-==========================*/
+/*======================================
+            HERO CONTENT
+=======================================*/
 
 .hero-content{
 
-position:relative;
+    position:relative;
 
-z-index:5;
+    z-index:2;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    max-width:900px;
+
+    margin:auto;
 
 }
 
+/*======================================
+            HERO LOGO
+=======================================*/
+
 .hero-logo{
 
-width:270px;
+    width:300px;
 
-    width:320px;
+    max-width:90%;
 
-    margin:60px auto 40px;
+    margin-bottom:30px;
 
-margin-bottom:35px;
-
-animation:heroLogo 6s infinite ease-in-out;
+    animation:heroLogo 6s ease-in-out infinite;
 
 }
 
 @keyframes heroLogo{
 
-0%{
+    0%{
+        transform:translateY(0);
+    }
 
-transform:translateY(0);
+    50%{
+        transform:translateY(-10px);
+    }
 
-}
-
-50%{
-
-transform:translateY(-15px);
-
-}
-
-100%{
-
-transform:translateY(0);
+    100%{
+        transform:translateY(0);
+    }
 
 }
 
-}
+/*======================================
+            HERO TITLE
+=======================================*/
 
 .hero h1{
 
-font-family:'Cinzel',serif;
+    font-family:'Cinzel',serif;
 
-font-size:82px;
+    font-size:clamp(52px,6vw,82px);
 
-line-height:1.2;
+    line-height:1.15;
 
-letter-spacing:2px;
+    letter-spacing:2px;
 
-margin-bottom:20px;
+    margin-bottom:20px;
 
 }
 
 .hero p{
 
-font-size:22px;
+    font-size:20px;
 
-letter-spacing:2px;
+    color:var(--text);
 
-color:var(--text);
+    letter-spacing:1px;
 
-margin-top:20px;
+    max-width:700px;
+
+    margin-bottom:40px;
+
+    line-height:1.8;
 
 }
 
-/*=========================
-        HERO BUTTONS
-==========================*/
+/*======================================
+            HERO BUTTONS
+=======================================*/
 
 .hero-buttons{
 
-display:flex;
+    display:flex;
 
-justify-content:center;
+    justify-content:center;
 
-gap:25px;
+    align-items:center;
 
-margin-top:55px;
+    gap:20px;
 
-flex-wrap:wrap;
+    flex-wrap:wrap;
 
 }
 
 .hero-buttons a{
 
-padding:18px 42px;
+    padding:18px 40px;
 
-border-radius:50px;
+    border-radius:50px;
 
-border:1px solid var(--primary);
+    border:1px solid var(--primary);
 
-color:white;
+    color:#fff;
 
-transition:.45s;
+    transition:.4s;
 
-font-size:16px;
-
-letter-spacing:1px;
+    font-size:16px;
 
 }
 
 .hero-buttons a:hover{
 
-background:var(--primary);
+    background:var(--primary);
 
-color:black;
+    color:#000;
 
-transform:translateY(-8px);
+    transform:translateY(-6px);
 
-box-shadow:0 20px 35px rgba(212,175,55,.25);
+    box-shadow:0 15px 35px rgba(212,175,55,.25);
+
+}
+
+/*======================================
+        MOBILE RESPONSIVE HERO
+=======================================*/
+
+@media(max-width:768px){
+
+    .hero{
+
+        padding:100px 20px 40px;
+
+        justify-content:center;
+
+    }
+
+    .hero-logo{
+
+        width:170px;
+
+        margin-bottom:25px;
+
+    }
+
+    .hero h1{
+
+        font-size:34px;
+
+        line-height:1.25;
+
+    }
+
+    .hero p{
+
+        font-size:15px;
+
+        max-width:320px;
+
+        line-height:1.7;
+
+        margin-bottom:30px;
+
+    }
+
+    .hero-buttons{
+
+        flex-direction:column;
+
+        gap:15px;
+
+    }
+
+    .hero-buttons a{
+
+        width:220px;
+
+        padding:14px;
+
+        font-size:15px;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .hero-logo{
+
+        width:150px;
+
+    }
+
+    .hero h1{
+
+        font-size:28px;
+
+    }
+
+    .hero p{
+
+        font-size:13px;
+
+    }
 
 }
 
@@ -785,25 +884,119 @@ transform:translate(-50%,10px);
 
 }
 
+/*=========================
+        ABOUT LEFT
+==========================*/
+
 .about-left{
+
+    position:relative;
 
     display:flex;
 
     justify-content:center;
 
+    align-items:center;
+
 }
+
+/* Gold Glow */
+
+.about-left::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:420px;
+
+    height:420px;
+
+    border-radius:50%;
+
+    background:radial-gradient(
+        circle,
+        rgba(212,175,55,.35) 0%,
+        rgba(212,175,55,.15) 35%,
+        rgba(212,175,55,.05) 60%,
+        transparent 75%
+    );
+
+    filter:blur(70px);
+
+    animation:glowPulse 5s ease-in-out infinite;
+
+    z-index:1;
+
+}
+
+/* Logo */
 
 .about-left img{
 
-    width:320px;
+    position:relative;
 
-    filter:drop-shadow(
+    z-index:2;
 
-    0 0 35px
+    width:300px;
 
-    rgba(212,175,55,.25)
+    filter:drop-shadow(0 0 30px rgba(212,175,55,.45));
 
-    );
+    animation:logoFloatAbout 6s ease-in-out infinite;
+
+}
+
+/* Glow Animation */
+
+@keyframes glowPulse{
+
+    0%{
+
+        transform:scale(1);
+
+        opacity:.7;
+
+    }
+
+    50%{
+
+        transform:scale(1.12);
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+        opacity:.7;
+
+    }
+
+}
+
+/* Logo Animation */
+
+@keyframes logoFloatAbout{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-10px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
 
 }
 
@@ -2230,8 +2423,12 @@ color:var(--primary)!important;
     }
 
     .hero-logo{
-        width:100px;
-    }
+
+    width:170px;
+
+    margin-bottom:25px;
+
+}
 
     .hero-buttons a{
         width:200px;
