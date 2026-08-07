@@ -2145,7 +2145,7 @@ color:var(--primary)!important;
 =======================================*/
 
 .menu-btn{
-    display:none;
+    display:block !important;
     font-size:30px;
     color:#D4AF37;
     cursor:pointer;
