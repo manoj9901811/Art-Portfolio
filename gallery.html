@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Gallery | Manoj's Art</title>
+
+    <meta name="description"
+        content="Explore the handmade paintings, pencil sketches, mandala art, pen art and portraits created by Manoj's Art.">
+
+    <link rel="icon" href="images/logo1.png">
+
+    <!-- Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Main CSS -->
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<body>
+
+
+<!--=====================================
+                LOADER
+======================================-->
+
+<div id="loader">
+
+    <img src="images/logo.png" alt="Manoj's Art">
+
+</div>
+
+
+
+<!--=====================================
+                HEADER
+======================================-->
+
+<header>
+
+<nav>
+
+    <!-- Logo -->
+
+    <div class="logo">
+
+        <a href="index.html">
+
+            <img
+                src="images/off_logo.png"
+                alt="Manoj's Art">
+
+        </a>
+
+    </div>
+
+
+    <!-- Desktop Navigation -->
+
+    <ul class="nav-links">
+
+        <li>
+            <a href="index.html">
+                Home
+            </a>
+        </li>
+
+        <li>
+            <a href="gallery.html" class="active">
+                Gallery
+            </a>
+        </li>
+
+        <li>
+            <a href="about.html">
+                About
+            </a>
+        </li>
+
+        <li>
+            <a href="pricing.html">
+                Pricing
+            </a>
+        </li>
+
+        <li>
+            <a href="contact.html">
+                Contact
+            </a>
+        </li>
+
+    </ul>
+
+
+    <!-- Commission Button -->
+
+    <a
+        href="contact.html"
+        class="btn-nav">
+
+        Commission Artwork
+
+    </a>
+
+
+    <!-- Mobile Menu Button -->
+
+    <div class="menu-btn">
+
+        <i class="fas fa-bars"></i>
+
+    </div>
+
+</nav>
+
+</header>
+
+
+
+<!--=====================================
+            MOBILE MENU
+======================================-->
+
+<div class="mobile-menu">
+
+    <i class="fas fa-times close-menu"></i>
+
+    <a href="index.html">
+        Home
+    </a>
+
+    <a href="gallery.html">
+        Gallery
+    </a>
+
+    <a href="about.html">
+        About
+    </a>
+
+    <a href="pricing.html">
+        Pricing
+    </a>
+
+    <a href="contact.html">
+        Contact
+    </a>
+
+    <a
+        href="contact.html"
+        class="mobile-btn">
+
+        Commission Artwork
+
+    </a>
+
+</div>
+
+
+
+<!--=====================================
+            GALLERY HERO
+======================================-->
+
+<section class="gallery-hero">
+
+    <div class="gallery-hero-content">
+
+        <img
+            src="images/logo.png"
+            class="gallery-hero-logo"
+            alt="Manoj's Art">
+
+
+        <span class="section-subtitle">
+
+            THE COLLECTION
+
+        </span>
+
+
+        <h1>
+
+            Art That Speaks
+
+            <span>
+
+                Without Words
+
+            </span>
+
+        </h1>
+
+
+        <p>
+
+            Explore a collection of handmade paintings,
+            pencil sketches, mandala art, pen art and
+            personalized creations.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!--=====================================
+            GALLERY SECTION
+======================================-->
+
+<section class="gallery-section" id="gallery">
+
+    <div class="container">
+
+
+        <!-- Section Heading -->
+
+        <div class="section-title">
+
+            <span class="section-subtitle">
+
+                MY ARTWORK
+
+            </span>
+
+            <h2>
+
+                Explore The Collection
+
+            </h2>
+
+            <p>
+
+                Every artwork is created by hand with
+                patience, creativity and attention to detail.
+
+            </p>
+
+        </div>
+
+
+        <!--=====================================
+                CATEGORY FILTER
+        ======================================-->
+
+        <div class="gallery-filters">
+
+            <button
+                class="filter-btn active"
+                data-filter="all">
+
+                All
+
+            </button>
+
+
+            <button
+                class="filter-btn"
+                data-filter="painting">
+
+                Painting
+
+            </button>
+
+
+            <button
+                class="filter-btn"
+                data-filter="pencil">
+
+                Pencil Sketch
+
+            </button>
+
+
+            <button
+                class="filter-btn"
+                data-filter="mandala">
+
+                Mandala
+
+            </button>
+
+
+            <button
+                class="filter-btn"
+                data-filter="pen">
+
+                Pen Art
+
+            </button>
+
+
+            <button
+                class="filter-btn"
+                data-filter="portrait">
+
+                Portrait
+
+            </button>
+
+        </div>
+
+
+        <!--=====================================
+                ARTWORK GRID
+        ======================================-->
+
+        <div class="gallery-grid">
+
+
+            <!-- Artwork 1 -->
+
+            <div
+                class="gallery-card"
+                data-category="painting">
+
+                <div class="gallery-image">
+
+                    <img
+                        src="images/Painting.jpeg"
+                        alt="Handmade Painting">
+
+                    <div class="gallery-overlay">
+
+                        <button
+                            class="view-image"
+                            data-image="images/Painting.jpeg"
+                            data-title="Golden Dreams">
+
+                            <i class="fas fa-expand"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <div class="gallery-info">
+
+                    <span>
+                        Painting
+                    </span>
+
+                    <h3>
+                        Golden Dreams
+                    </h3>
+
+                    <p>
+                        Acrylic Artwork
+                    </p>
+
+                    <strong>
+                        ₹1,199
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Artwork 2 -->
+
+            <div
+                class="gallery-card"
+                data-category="pencil">
+
+                <div class="gallery-image">
+
+                    <img
+                        src="images/pencil.jpeg"
+                        alt="Realistic Pencil Sketch">
+
+                    <div class="gallery-overlay">
+
+                        <button
+                            class="view-image"
+                            data-image="images/pencil.jpeg"
+                            data-title="Timeless Portrait">
+
+                            <i class="fas fa-expand"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <div class="gallery-info">
+
+                    <span>
+                        Pencil Sketch
+                    </span>
+
+                    <h3>
+                        Timeless Portrait
+                    </h3>
+
+                    <p>
+                        Graphite Portrait
+                    </p>
+
+                    <strong>
+                        ₹799
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Artwork 3 -->
+
+            <div
+                class="gallery-card"
+                data-category="mandala">
+
+                <div class="gallery-image">
+
+                    <img
+                        src="images/mandalart.jpeg"
+                        alt="Mandala Artwork">
+
+                    <div class="gallery-overlay">
+
+                        <button
+                            class="view-image"
+                            data-image="images/mandalart.jpeg"
+                            data-title="Sacred Mandala">
+
+                            <i class="fas fa-expand"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <div class="gallery-info">
+
+                    <span>
+                        Mandala
+                    </span>
+
+                    <h3>
+                        Sacred Mandala
+                    </h3>
+
+                    <p>
+                        Hand Drawn Design
+                    </p>
+
+                    <strong>
+                        ₹999
+                    </strong>
+
+                </div>
+
+            </div>
+
+            <div
+                class="gallery-card"
+                data-category="mandala">
+
+                <div class="gallery-image">
+
+                    <img
+                        src="images/Mandala.jpeg"
+                        alt="Mandala Artwork">
+
+                    <div class="gallery-overlay">
+
+                        <button
+                            class="view-image"
+                            data-image="images/Mandala.jpeg"
+                            data-title="Peace Mandala">
+
+                            <i class="fas fa-expand"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <div class="gallery-info">
+
+                    <span>
+                        Mandala
+                    </span>
+
+                    <h3>
+                        Peace Mandala
+                    </h3>
+
+                    <p>
+                        Hand Drawn Design
+                    </p>
+
+                    <strong>
+                        ₹1,199
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Artwork 4 -->
+
+            <div
+                class="gallery-card"
+                data-category="pen">
+
+                <div class="gallery-image">
+
+                    <img
+                        src="images/penart.jpeg"
+                        alt="Pen Art">
+
+                    <div class="gallery-overlay">
+
+                        <button
+                            class="view-image"
+                            data-image="images/penart.jpeg"
+                            data-title="Ink Stories">
+
+                            <i class="fas fa-expand"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <div class="gallery-info">
+
+                    <span>
+                        Pen Art
+                    </span>
+
+                    <h3>
+                        Ink Stories
+                    </h3>
+
+                    <p>
+                        Fine Line Illustration
+                    </p>
+
+                    <strong>
+                        ₹799
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Artwork 5 -->
+
+            <div
+                class="gallery-card"
+                data-category="portrait">
+
+                <div class="gallery-image">
+
+                    <img
+                        src="images/potrait.jpeg"
+                        alt="Custom Portrait">
+
+                    <div class="gallery-overlay">
+
+                        <button
+                            class="view-image"
+                            data-image="images/potrait.jpeg"
+                            data-title="Memories In Art">
+
+                            <i class="fas fa-expand"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <div class="gallery-info">
+
+                    <span>
+                        Portrait
+                    </span>
+
+                    <h3>
+                        Memories In Art
+                    </h3>
+
+                    <p>
+                        Custom Portrait
+                    </p>
+
+                    <strong>
+                        ₹1999
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Artwork 6 -->
+
+            <div
+                class="gallery-card"
+                data-category="painting">
+
+                <div class="gallery-image">
+
+                    <img
+                        src="images/paint.jpeg"
+                        alt="Canvas Painting">
+
+                    <div class="gallery-overlay">
+
+                        <button
+                            class="view-image"
+                            data-image="images/paint.jpeg"
+                            data-title="Colours of Life">
+
+                            <i class="fas fa-expand"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <div class="gallery-info">
+
+                    <span>
+                        Painting
+                    </span>
+
+                    <h3>
+                        Colours of Life
+                    </h3>
+
+                    <p>
+                        Canvas Artwork
+                    </p>
+
+                    <strong>
+                        ₹1199
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+<!--=====================================
+                LIGHTBOX
+======================================-->
+
+<div class="gallery-lightbox" id="galleryLightbox">
+
+    <button class="lightbox-close" id="lightboxClose">
+        <i class="fas fa-times"></i>
+    </button>
+
+    <button class="lightbox-prev" id="lightboxPrev">
+        <i class="fas fa-chevron-left"></i>
+    </button>
+
+    <div class="lightbox-content">
+
+        <img
+            id="lightboxImage"
+            src=""
+            alt="Artwork Preview">
+
+        <div class="lightbox-info">
+
+            <span id="lightboxCategory">
+                Artwork
+            </span>
+
+            <h3 id="lightboxTitle">
+                Artwork
+            </h3>
+
+        </div>
+
+    </div>
+
+    <button class="lightbox-next" id="lightboxNext">
+        <i class="fas fa-chevron-right"></i>
+    </button>
+
+</div>
+<!--=====================================
+        GALLERY CTA
+======================================-->
+
+<section class="gallery-cta reveal">
+
+    <div class="container">
+
+        <div class="gallery-cta-box">
+
+            <span class="section-subtitle">
+                YOUR IDEA • YOUR ART
+            </span>
+
+            <h2>
+                Don't See What You're Looking For?
+            </h2>
+
+            <p>
+                Have a special idea in mind?
+                I can create a personalized painting,
+                pencil sketch, mandala, pen art or portrait
+                specially for you.
+            </p>
+
+            <a href="contact.html" class="btn">
+                Commission Your Artwork
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+<!--=====================================
+                FOOTER
+======================================-->
+
+<footer class="footer">
+
+<div class="container footer-container">
+
+<div class="footer-logo">
+
+<img src="images/off_logo.png"
+
+alt="Manoj's Art">
+
+</div>
+
+<p class="footer-tagline">
+
+Painting • Pen Art • Mandala • Pencil Sketching
+
+</p>
+
+<div class="footer-divider"></div>
+
+<ul class="footer-menu">
+
+<li><a href="#home">Home</a></li>
+
+<li><a href="gallery.html">Gallery</a></li>
+
+<li><a href="about.html">About</a></li>
+
+
+<li><a href="pricing.html">Pricing</a></li>
+
+<li><a href="contact.html">Contact</a></li>
+
+</ul>
+
+<div class="footer-divider"></div>
+
+<div class="footer-social">
+
+<a href="mailto:manoj9901811@gmail.com">
+
+<i class="fas fa-envelope"></i>
+
+</a>
+
+<a href="https://www.instagram.com/art_by.manoj?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+
+target="_blank">
+
+<i class="fab fa-instagram"></i>
+
+</a>
+
+<a href="https://www.youtube.com/@artby-manoj"
+
+target="_blank">
+
+<i class="fab fa-youtube"></i>
+
+</a>
+
+<a href="https://wa.me/919901811695"
+
+target="_blank">
+
+<i class="fab fa-whatsapp"></i>
+
+</a>
+
+</div>
+
+<div class="footer-quote">
+
+"Every Stroke Tells a Story."
+
+</div>
+
+<div class="footer-copy">
+
+Developed by
+
+<span>
+
+Manoj Somanna
+
+</span>
+
+
+
+</div>
+
+</div>
+
+</footer>
+
+<!--=====================================
+            BACK TO TOP
+======================================-->
+
+<a href="#" id="topBtn">
+
+    <i class="fas fa-arrow-up"></i>
+
+</a>
+
+
+<!--=====================================
+            JAVASCRIPT
+======================================-->
+
+<script src="js/script.js"></script>
+
+</body>
+
+</html>
