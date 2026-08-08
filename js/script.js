@@ -683,3 +683,84 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 });
+/*========================================
+        AUTO TESTIMONIAL SLIDER
+========================================*/
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const track =
+        document.querySelector(".testimonial-track");
+
+    const cards =
+        document.querySelectorAll(".testimonial-card");
+
+    if (!track || cards.length === 0) {
+        return;
+    }
+
+
+    let currentSlide = 0;
+
+
+    function getSlidesPerView() {
+
+        if (window.innerWidth <= 768) {
+            return 1;
+        }
+
+        if (window.innerWidth <= 1024) {
+            return 2;
+        }
+
+        return 3;
+    }
+
+
+    function moveSlider() {
+
+        const slidesPerView =
+            getSlidesPerView();
+
+        const maxSlide =
+            cards.length - slidesPerView;
+
+
+        currentSlide++;
+
+
+        if (currentSlide > maxSlide) {
+            currentSlide = 0;
+        }
+
+
+        const cardWidth =
+            cards[0].offsetWidth;
+
+        const gap =
+            parseFloat(
+                getComputedStyle(track).gap
+            ) || 0;
+
+
+        const distance =
+            currentSlide *
+            (cardWidth + gap);
+
+
+        track.style.transform =
+            "translateX(-" + distance + "px)";
+
+    }
+
+
+    /* Move automatically every 4 seconds */
+
+    setInterval(function () {
+
+        moveSlider();
+
+    }, 4000);
+
+
+});
