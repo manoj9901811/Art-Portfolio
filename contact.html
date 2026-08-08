@@ -210,7 +210,7 @@
             CONTACT HERO
 ======================================-->
 
-<section class="contact-hero">
+<section class="contact-hero" id="up">
 
     <div class="contact-hero-content">
 
@@ -429,7 +429,7 @@
             CONTACT FORM
 ======================================-->
 
-<div class="container">
+<div class="container" id="contact-form">
 
     <div class="contact-form-layout">
 
@@ -547,9 +547,7 @@
         <!--=====================================
                     CONTACT FORM
         ======================================-->
-<!--=====================================
-            CONTACT FORM
-======================================-->
+
 
 <div class="contact-form-box">
 
@@ -800,10 +798,10 @@
 
 
 <!--=====================================
-            CONTACT FAQ
+                CONTACT FAQ
 ======================================-->
 
-<section class="contact-faq reveal">
+<section class="contact-faq">
 
     <div class="container">
 
@@ -828,11 +826,18 @@
         <div class="contact-faq-container">
 
 
+            <!-- FAQ 1 -->
+
             <div class="contact-faq-item">
 
-                <button class="contact-faq-question">
+                <button
+                    type="button"
+                    class="contact-faq-question"
+                    onclick="toggleFAQ(this)">
 
-                    How do I order a custom artwork?
+                    <span>
+                        How do I order a custom artwork?
+                    </span>
 
                     <i class="fas fa-plus"></i>
 
@@ -853,11 +858,18 @@
             </div>
 
 
+            <!-- FAQ 2 -->
+
             <div class="contact-faq-item">
 
-                <button class="contact-faq-question">
+                <button
+                    type="button"
+                    class="contact-faq-question"
+                    onclick="toggleFAQ(this)">
 
-                    Can I send a reference photograph?
+                    <span>
+                        Can I send a reference photograph?
+                    </span>
 
                     <i class="fas fa-plus"></i>
 
@@ -876,11 +888,18 @@
             </div>
 
 
+            <!-- FAQ 3 -->
+
             <div class="contact-faq-item">
 
-                <button class="contact-faq-question">
+                <button
+                    type="button"
+                    class="contact-faq-question"
+                    onclick="toggleFAQ(this)">
 
-                    How long does an artwork take?
+                    <span>
+                        How long does an artwork take?
+                    </span>
 
                     <i class="fas fa-plus"></i>
 
@@ -900,11 +919,18 @@
             </div>
 
 
+            <!-- FAQ 4 -->
+
             <div class="contact-faq-item">
 
-                <button class="contact-faq-question">
+                <button
+                    type="button"
+                    class="contact-faq-question"
+                    onclick="toggleFAQ(this)">
 
-                    Do you accept custom artwork requests?
+                    <span>
+                        Do you accept custom artwork requests?
+                    </span>
 
                     <i class="fas fa-plus"></i>
 
@@ -923,11 +949,18 @@
             </div>
 
 
+            <!-- FAQ 5 -->
+
             <div class="contact-faq-item">
 
-                <button class="contact-faq-question">
+                <button
+                    type="button"
+                    class="contact-faq-question"
+                    onclick="toggleFAQ(this)">
 
-                    Do you deliver artwork?
+                    <span>
+                        Do you deliver artwork?
+                    </span>
 
                     <i class="fas fa-plus"></i>
 
@@ -944,6 +977,7 @@
                 </div>
 
             </div>
+
 
         </div>
 
@@ -1248,11 +1282,113 @@ Manoj Somanna
             BACK TO TOP
 ======================================-->
 
-<a href="#" id="topBtn">
+<a href="#up" id="topBtn">
 
     <i class="fas fa-arrow-up"></i>
 
 </a>
+
+
+<!--=====================================
+            FAQ JAVASCRIPT
+======================================-->
+
+<script>
+
+function toggleFAQ(button) {
+
+    const currentItem =
+        button.closest(".contact-faq-item");
+
+    const currentAnswer =
+        currentItem.querySelector(".contact-faq-answer");
+
+    const currentIcon =
+        button.querySelector("i");
+
+
+    /* Close all other FAQ items */
+
+    document
+        .querySelectorAll(".contact-faq-item")
+        .forEach(function(item) {
+
+            if (item !== currentItem) {
+
+                const answer =
+                    item.querySelector(".contact-faq-answer");
+
+                const icon =
+                    item.querySelector(".contact-faq-question i");
+
+
+                answer.style.setProperty(
+                    "display",
+                    "none",
+                    "important"
+                );
+
+                answer.style.maxHeight = "0px";
+
+                icon.style.transform =
+                    "rotate(0deg)";
+
+                item.classList.remove("active");
+
+            }
+
+        });
+
+
+    /* Check current state */
+
+    const isOpen =
+        currentItem.classList.contains("active");
+
+
+    if (isOpen) {
+
+        /* CLOSE */
+
+        currentAnswer.style.setProperty(
+            "display",
+            "none",
+            "important"
+        );
+
+        currentAnswer.style.maxHeight =
+            "0px";
+
+        currentIcon.style.transform =
+            "rotate(0deg)";
+
+        currentItem.classList.remove("active");
+
+    }
+
+    else {
+
+        /* OPEN */
+
+        currentAnswer.style.setProperty(
+            "display",
+            "block",
+            "important"
+        );
+
+        currentAnswer.style.maxHeight =
+            "500px";
+
+        currentIcon.style.transform =
+            "rotate(45deg)";
+
+        currentItem.classList.add("active");
+
+    }
+
+}
+
+</script>
 
 
 <script src="js/script.js"></script>

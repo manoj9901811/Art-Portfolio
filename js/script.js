@@ -502,30 +502,43 @@ pricingFaqItems.forEach(item => {
 
 });
 /*==================================================
-            CONTACT FAQ
+                    CONTACT FAQ
 ==================================================*/
 
-const contactFaqItems =
-    document.querySelectorAll(".contact-faq-item");
+document.addEventListener("DOMContentLoaded", function () {
 
-contactFaqItems.forEach(item => {
+    const faqQuestions =
+        document.querySelectorAll(".contact-faq-question");
 
-    const question =
-        item.querySelector(".contact-faq-question");
 
-    question.addEventListener("click", () => {
+    faqQuestions.forEach(function (question) {
 
-        contactFaqItems.forEach(otherItem => {
+        question.addEventListener("click", function () {
 
-            if(otherItem !== item){
+            const currentItem =
+                this.closest(".contact-faq-item");
 
-                otherItem.classList.remove("active");
 
-            }
+            /* Close all other items */
+
+            document
+                .querySelectorAll(".contact-faq-item")
+                .forEach(function (item) {
+
+                    if (item !== currentItem) {
+
+                        item.classList.remove("active");
+
+                    }
+
+                });
+
+
+            /* Toggle current item */
+
+            currentItem.classList.toggle("active");
 
         });
-
-        item.classList.toggle("active");
 
     });
 
@@ -632,3 +645,41 @@ async function sendArtworkForm(event) {
         originalButtonText;
 
 }
+/*========================================
+            BACK TO TOP
+========================================*/
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const topBtn = document.getElementById("topBtn");
+
+    if (!topBtn) {
+        return;
+    }
+
+    window.addEventListener("scroll", function () {
+
+        if (window.scrollY > 300) {
+
+            topBtn.classList.add("show");
+
+        } else {
+
+            topBtn.classList.remove("show");
+
+        }
+
+    });
+
+    topBtn.addEventListener("click", function (e) {
+
+        e.preventDefault();
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+
+    });
+
+});
