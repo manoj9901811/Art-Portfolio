@@ -9332,11 +9332,11 @@ padding:0 20px 20px;
 
 .testimonial-track .testimonial-card {
 
-    flex: 0 0 400px;
+    flex: 0 0 450px;
 
-    width: 400px;
+    width: 450px;
 
-    min-width: 400px;
+    min-width: 450px;
 
 }
 
@@ -9430,11 +9430,11 @@ padding:0 20px 20px;
 
     .testimonial-track .testimonial-card {
 
-        flex: 0 0 320px;
+        flex: 0 0 400px;
 
-        width: 320px;
+        width: 400px;
 
-        min-width: 320px;
+        min-width: 400px;
 
     }
 
@@ -9458,11 +9458,11 @@ padding:0 20px 20px;
 
     .testimonial-track .testimonial-card {
 
-        flex: 0 0 300px;
+        flex: 0 0 400px;
 
-        width: 300px;
+        width: 400px;
 
-        min-width: 300px;
+        min-width: 400px;
 
     }
 
